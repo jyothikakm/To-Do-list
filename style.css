@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,700,900');
+/* General Styles */
+body {
+  font-family: 'Poppins', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Centralized Container */
+.todo-container {
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 20px;
+  width: 400px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Space between tasks and buttons */
+  align-items: center;
+  text-align: center;
+}
+
+/* Title */
+h1 {
+  color: rgb(116, 212, 116);
+  margin-bottom: 20px;
+}
+
+/* Input Container */
+.input-container {
+  display: flex;
+  margin: 10px 0;
+  width: 100%;
+}
+
+#todo-input {
+  width: 70%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+#add-btn {
+  width: 60px; /* Set the width of the image */
+  height: 60px; /* Set the height of the image */
+  margin-left: 20px; /* Add some space between the input and the image */
+  cursor: pointer;
+  border: none; /* Remove border */
+  outline: none; /* Remove outline */
+}
+
+#add-btn:hover {
+  filter: brightness(0.9); /* Slightly darken the image on hover */
+}
+
+
+/* Task List */
+.task-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  max-height: 400px; /* Limit height to prevent overflow */
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.task-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  margin: 5px 0;
+  background: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Action Buttons (Edit & Delete) Below the List */
+.action-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.edit-btn, .delete-btn {
+  padding: 10px 15px;
+  font-size: 14px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  color: white;
+  width: 100px;
+}
+
+.edit-btn {
+  background-color:  rgb(116, 212, 116);
+}
+
+.edit-btn:hover {
+  background-color:  rgb(116, 212, 116);
+}
+
+.delete-btn {
+  background-color: #F44336;
+}
+
+.delete-btn:hover {
+  background-color: #D32F2F;
+}
+
+/* No Tasks Message */
+#no-tasks-message {
+  margin-top: 20px;
+  color: gray;
+  font-size: 14px;
+  visibility: hidden;
+}
+
+.task-list:empty + #no-tasks-message {
+  visibility: visible;
+}
